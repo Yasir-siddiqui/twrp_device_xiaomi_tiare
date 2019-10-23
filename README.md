@@ -9,7 +9,6 @@ CPU     | Quad-core 1.4 GHz Cortex-A53
 CHIPSET | Qualcomm MSM8917 Snapdragon 425
 GPU     | Adreno 308
 Memory  | 1 GB
-
 Shipped Android Version | Android 8.1.0 with Android Go
 Storage | 8 GB
 MicroSD | Up to 128 GB (dedicated slot)
