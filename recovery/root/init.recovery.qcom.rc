@@ -31,8 +31,7 @@ on fs
     chmod 0664 /dev/ion
     chown system system /dev/ion
 
-    wait /dev/block/platform/soc/${ro.boot.bootdevice}
-    symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
+    setprop ro.board.platform msm8937
 
 on property:ro.crypto.state=encrypted
     start sbinqseecomd

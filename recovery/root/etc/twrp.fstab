@@ -4,9 +4,9 @@
 
 /system         ext4      /dev/block/bootdevice/by-name/system               flags=display="System"
 /system_image   emmc      /dev/block/bootdevice/by-name/system               flags=backup=1;flashimg=1
-/vendor         ext4      /dev/block/bootdevice/by-name/vendor               flags=display="Vendor";backup=1;wipeingui
-/vendor_image   emmc      /dev/block/bootdevice/by-name/vendor               flags=backup=1;flashimg=1
-/data           ext4      /dev/block/bootdevice/by-name/userdata             flags=length=-16384
+/vendor         ext4      /dev/block/bootdevice/by-name/vendor                 flags=display="Vendor";backup=1;wipeingui
+/vendor_image   emmc      /dev/block/bootdevice/by-name/vendor                 flags=backup=1;flashimg=1
+/data           ext4      /dev/block/bootdevice/by-name/userdata             flags=length=-16384,encryptable=footer
 /cache          ext4      /dev/block/bootdevice/by-name/cache                flags=display="Cache"
 /recovery       emmc      /dev/block/bootdevice/by-name/recovery             flags=display="Recovery";backup=1
 /boot           emmc      /dev/block/bootdevice/by-name/boot                 flags=display="Boot"
@@ -16,6 +16,5 @@
 /firmware       vfat      /dev/block/bootdevice/by-name/modem                flags=display="Firmware";mounttodecrypt
 /persist        ext4      /dev/block/bootdevice/by-name/persist              flags=display="Persist";backup=1
 
-/sdcard1        vfat      /dev/block/mmcblk1p1                               flags=display="MicroSD";storage;wipeingui;removable
-/usbotg         vfat      /dev/block/sda1                                    flags=display="USB Storage";storage;wipeingui;removable
-
+/sdcard1        auto      /dev/block/mmcblk1p1                               flags=display="MicroSD";storage;wipeingui;removable
+/usb-otg        auto      /dev/block/sda1                                    flags=display="USB Storage";storage;wipeingui;removable
